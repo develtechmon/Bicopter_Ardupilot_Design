@@ -20,3 +20,18 @@
 | GND        | GND               |                                                                             |
 | 5V         | 4V5               |                                                                             |
 | Signal     | S6                | SERVO6_FUNCTION = 76 (TiltMotorsFrontLeft - for both pitch and yaw control) |
+
+## Right Motor
+| RIGHT MOTOR to ESC 4 in 1  | Flight Controller | Ardupilot Port                                |
+|----------------------------|-------------------|-----------------------------------------------|
+| VDD                        | VDD               |                                               |
+| M1                         | S1                | SERVO1_FUNCTION = 74 (Throttle right)  ESC M1 |
+| GND                        | GND               |                                               |
+
+## Left Motor
+| RIGHT MOTOR to ESC 4 in 1  | Flight Controller | Ardupilot Port                                |
+|----------------------------|-------------------|-----------------------------------------------|
+| VDD                        | VDD               |                                               |
+| M3                         | S3                | SERVO3_FUNCTION = 73 (Throttle left)  ESC M1 |
+| GND                        | GND               |                                               |
+
