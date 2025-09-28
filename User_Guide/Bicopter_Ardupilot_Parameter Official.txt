@@ -57,7 +57,7 @@ TiltMotorsFrontRight
 	
 If you drone osscilate or seems like servo fighting with each other, you can tune this parameter to achieve a final good stable fly.
 	
-## Change ESC direction
+## Change ESC direction using BLHeli Configurator
 ESC 1 - Reversed (M1) CW (Rotate to right)
 ESC 2 - Normal (M3) CCW (Rotate to left)
 
