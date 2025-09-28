@@ -1,0 +1,63 @@
+############### ORIGINAL ###############
+
+# Original configuration for Pixflow, Rangefinder and GPS in ardupilot
+EK3_SRC_OPTIONS = 1
+EK3_SRC1_POSXY = 3
+EK3_SRC1_VELXY = 3
+
+AHRS_GPS_USE = 1
+BATT_FS_LOW_ACT = 0
+FS_THR_ENABLE = 1
+FENCE_ENABLE = 0
+
+# Original configuration between GPS and Optical flow
+AHRS_EKF_TYPE = 3
+EK3_SRC_OPTIONS = 1
+
+EK3_SRC2_POSXY = 0
+EK3_SRC2_POSZ = 1
+EK3_SRC2_VELXY = 0
+EK3_SRC2_VELZ = 0
+EK3_SRC2_YAW =0
+
+RC6_OPTION = 0
+
+# Original configuration for ESC in ardupilot
+MOT_PWM_TYPE = 0
+SERVO_DSHOT_ESC = 0
+SERVO_BLH_AUTO = 0 
+SERVO_BLH_OTYPE = 0
+
+############ MODIFIED ###############
+
+# Setup for Pixflow, Rangefinder and Disable GPS for indoor flying
+EK3_SRC_OPTIONS = 0 
+EK3_SRC1_POSXY = 0
+EK3_SRC1_VELXY = 5
+
+AHRS_GPS_USE = 0
+BATT_FS_LOW_ACT = LAND
+FS_THR_ENABLE = 0
+FENCE_ENABLE = 0
+
+# Setup for ESC Dshot 600 for Ardupilot
+MOT_PWM_TYPE = 6
+SERVO_DSHOT_ESC = 2
+SERVO_BLH_AUTO = 1 (To enable BLHeli pas through for ESC Firmware Updates)
+SERVO_BLH_OTYPE = 6
+If you observe abnormality, may consider to flash the firmaware of ESC and calibrate the ESC
+
+# Transition between GPS and Optical flow
+AHRS_EKF_TYPE = 3
+EK3_SRC_OPTIONS = 0
+
+EK3_SRC2_POSXY = 0
+EK3_SRC2_POSZ = 2
+EK3_SRC2_VELXY = 5
+EK3_SRC2_VELZ = 0
+EK3_SRC2_YAW = 1
+
+
+RC6_OPTION = 90 in my case i'm using Knob controller
+After that rotate your knob and you'll observe the EKF source change. 
+For Optical flow, we're using MIDDLE knob and First one is GPS.
