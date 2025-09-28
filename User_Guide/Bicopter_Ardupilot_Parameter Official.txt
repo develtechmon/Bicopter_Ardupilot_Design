@@ -1,0 +1,66 @@
+Bicopter_Ardupilot_Parameter Official
+
+## Frame Setup ##
+FRAME_CLASS = 10  (Bicopter)
+FRAME_TYPE = 0    (or any value - it's ignored for bicopters)
+
+## Servo Setup ##
+In flight controllet MATEK-F405 HDTE, i'm using S6 and S5. Please
+connect the servo as follow
+
+S5 - Left Servo
+S6 - Right Servo
+
+SERVO5_FUNCTION = 75  (TiltMotorFrontRight - for both pitch and yaw control) - S5
+SERVO6_FUNCTION = 76  (TiltMotorsFrontLeft - for both pitch and yaw control) - S6
+
+SERVO5_REVERSED = 1     (Reverse right tilt servo)
+SERVO6_REVERSED = 0     (Dont reverse left tilt servo)
+
+// Ardupilot and Remote Channel Configuration
+// Swap the pitch and Yaw Channel
+RCMAP_PITCH = 2
+RCMAP_YAW = 4
+
+## Motor Setup ##
+SERVO1_FUNCTION = 74 (Throttle right)  ESC M1
+SERVO2_FUNCTION = 0 (Disabled)
+SERVO3_FUNCTION = 73 (Throttle left) ESC M3
+SERVO4_FUNCTION = 0 (Disabled)
+SERVO5_FUNCTION = 75
+SERVO6_FUNCTION = 76
+SERVO_RATE = 250
+
+## Important ##
+Currently, ESC didnt support DSHOT. You have to use normal ESC
+
+## ESC Calibration ##
+ESC Type = Normal
+
+Please Calibrate the ESC. It should works now after reboot. Please go to motor setting to test the motor individually
+
+
+## Servo Calibration ##
+Go to Servo output and set the following
+
+Position 5 
+TiltMotorFrontLeft 
+	Min = 1260
+	Trim = 1500
+	Max = 1740
+
+Position 6
+TiltMotorsFrontRight
+	Min = 1260
+	Trim = 1500
+	Max = 1740
+	
+If you drone osscilate or seems like servo fighting with each other, you can tune this parameter to achieve a final good stable fly.
+	
+## Change ESC direction
+ESC 1 - Reversed (M1) CW (Rotate to right)
+ESC 2 - Normal (M3) CCW (Rotate to left)
+
+## Extended Tuning ##
+I only change this Value
+--> Rate Yaw - (D = 0.008)
