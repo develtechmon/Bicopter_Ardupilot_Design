@@ -1,0 +1,23 @@
+Express
+Password for Binding Phrase is : Eldernangkai92
+
+I'm using UART 2 of MATEK or TX2 and RTX. To enable Happy Model ELRS EP1, i enable following parameter in ardupilot.
+
+SERIAL6_PROTOCOL = 23
+SERIAL6_BAUD = 115
+SERIAL6_OPTIONS = 0
+RC_PROTOCOL = 1
+RSSI_TYPE = 3
+BRD_ALT_CONFIG = 1 Then reboot your drone for change to take place.
+FLTMODE_CH = 8
+RC_OPTIONS = 1824 (default is 32) or 3872
+Here we need to enable 
+1. Use passthrough for CRSF telemetry
+2. Suppress CRSF mode/rate message for ELRS systems
+3. Enable multiple receiver support
+
+Also i set CHANNEL9 as my arm. This can be configure in extended config.
+From controller (T-Lite Jumper), i went to input and channel section of 9 and name
+it as arm.
+
+From Ardupilot, i set the Channel 9 as my arm
