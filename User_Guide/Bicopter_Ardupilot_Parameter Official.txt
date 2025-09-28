@@ -8,8 +8,8 @@ FRAME_TYPE = 0    (or any value - it's ignored for bicopters)
 In flight controllet MATEK-F405 HDTE, i'm using S6 and S5. Please
 connect the servo as follow
 
-S5 - Left Servo
-S6 - Right Servo
+S5 - Right Servo
+S6 - Left Servo
 
 SERVO5_FUNCTION = 75  (TiltMotorFrontRight - for both pitch and yaw control) - S5
 SERVO6_FUNCTION = 76  (TiltMotorsFrontLeft - for both pitch and yaw control) - S6
